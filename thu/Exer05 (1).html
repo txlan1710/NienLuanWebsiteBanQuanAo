@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Personal Information</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='Exer05.js'></script>
+    <style>
+        h1 {font-family: Georgia;color:black;}
+        p {font-family: Georgia;color: rgb(8, 151, 96);}
+    </style>
+</head>
+<body>
+    <h1 align="middle">Personal Information</h1>
+    <p>
+        <table style="width: 100%;">
+            <tr>
+                <td align="right"; style = "width: 50%">Enter name*:</td>
+                <td> <input type="text" name="inputName" id="inputName"> <span id="alertName" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td align="right"; style = "width: 50%">Sex*:</td>
+                <td> <input type="radio" id="male" name="sex" value ="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="sex" value ="Female">
+                    <label for="female">Female</label>
+                    <span id="alertSex" style="color:red"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"; style = "width: 50%">Enter email address*:</td>
+                <td> <input type="text" name="inputEmail" id="inputEmail"><span id="alertEmail" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td align="right"; style = "width: 50%">Enter birthday (MM/DD/YYYY)*:</td>
+                <td> <input type="text" name="inputBirthday" id="inputBirthday"><span id="alertBirthday" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td align="right"; style = "width: 50%">Enter street address(line 1)*:</td>
+                <td> <input type="text" name="inputStreet" id="inputStreet"><span id="alertStreet" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td align="right"; style = "width: 50%">Enter city*:</td>
+                <td> <input type="text" name="inputCity" id="inputCity"><span id="alertCity" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td align="right"; style = "width: 50%">Select a region*:</td>
+                <td><select id="inputRegion">
+                        <option value="NoValue"></option>
+                        <option value="Bac">Miền Bắc</option>
+                        <option value="Trung">Miền Trung</option>
+                        <option value="Nam">Miền Nam</option>
+                    </select>
+                    <span id="alertRegion" style="color:red"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"; style = "width: 50%">Enter 5-digit ZIP code*:</td>
+                <td> <input type="text" name="inputZIP" id="inputZIP"><span id="alertZIP" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td align="right"; style = "width: 50%"><button id="finished" onclick="validateForm()" value="Finished">Finished</button></td>
+                <td> <button id="clear" onclick="clearForm()" value="Clear">Clear</button></td>
+            </tr>
+        </table>
+    </p>
+    <script src="Exer05 (1).js"></script>
+</body>
+</html>
