@@ -140,7 +140,7 @@ h1 {
   /* footer */
   .footer-item {
     padding: .5rem 2rem;
-    background: #000000;
+    background: dimgrey;
     display: flex;
   
   }
@@ -150,7 +150,7 @@ h1 {
     display: flex;
   }
   
-  .footer-item .img-footer img {
+  .footer-item  img {
     width: 100%;
   }
   
@@ -177,7 +177,9 @@ h1 {
     display: flex;
   
   }
-  
+  .HOTLINE {
+    display: block;
+  }
   .footer-item .img-footer {
     align-items: center;
     display: flex;
@@ -203,4 +205,17 @@ h1 {
     margin-left: .5rem;
   }
 
+  .logo {
+    weight: 55px;
+    height: 55px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .footer-content {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;  
+  }
 

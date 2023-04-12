@@ -30,17 +30,48 @@ function validation_Login(){
 }
 
 function validateName() {
-
+    var name = document.getElementById('inputName').value;
+    var mess = document.getElementById('errorName');
+    if(name == ""){
+        mess.innerHTML = 'Tên không được để trống';
+        return false;
+    }
 }
+
 
 function validateEmail_Register() {
-
+    var email = document.getElementById('inputEmail').value;
+    var atposition = email.indexOf("@");
+    var dotposition = email.lastIndexOf(".");
+    var messEmail = document.getElementById('errorEmail');
+    if(atposition < 1 || dotposition < (atposition + 2)
+            || (dotposition + 2) >= email.length) {
+            messEmail.innerHTML = 'Vui lòng nhập email';
+        return false;
+    }
 }
 function validatePhone() {
-
+    var phone = document.getElementById('inputPhone').value;
+    var mess = document.getElementById('errorPhone');
+    if( phone == ""){
+        mess.innerHTML = 'Số điện thoại không được để trống';
+        return false;
+    }
 }
-function validatePass_Register() {
 
+function validatePass_Register() {
+    var pass = document.getElementById('inputPass').value;
+    var mess = document.getElementById('errorPass');
+    if ( pass == ""){
+        mess.innerHTML = 'Mật khẩu không được để trống';
+        return false;
+    }
+    if ( pass.length < 6 || pass.length > 15){
+        mess.innerHTML = 'Mật khẩu phải từ 6 đến 15 kí tựn'
+        return false;
+    }else{
+        mess.innerHTML = "";
+    }
 }
 function validate_Register() {
     validateName();
@@ -66,6 +97,8 @@ function validate_Register() {
 
 
 
+
+//https://www.javatpoint.com/confirm-password-validation-in-javascript
 /*
 function kiemtra() {
     var e = document.getElementById('email').value;
