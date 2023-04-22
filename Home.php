@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Home.CSS" />
+    <link rel="stylesheet" href="StyleWeb/Home.CSS" />
     <link rel="shortcut icon" type="image/png" href="Hinhanh/favicon.ico"/>
     <title>Trang Chủ</title>
   </head>
   <body>
     <header>
       <div class="header-main-left">
-        <img src="Hinhanh/favicon.ico" alt="img-log" />
+        <img src="Ao/favicon.ico" alt="img-log" />
       </div>
       <div class="header-main-right">
         <li class="search">
@@ -164,7 +164,7 @@
     <footer>
       <div class="footer-item">
         <div class="img-footer">
-          <img class="logo" src="Hinhanh/favicon.ico" alt="" />
+          <img class="logo" src="Ao//favicon.ico" alt="" />
         </div>
         <div class="social-footer">
           <div class="footer-content">

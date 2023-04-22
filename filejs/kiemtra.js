@@ -7,6 +7,9 @@ function validateEmail() {
             || (dotposition + 2) >= email.length) {
             messEmail.innerHTML = 'Vui lòng nhập email';
         return false;
+    }else{
+        messEmail.innerHTML = ''
+        return true;
     }
 }
 
@@ -18,12 +21,14 @@ function validatePass() {
         return false;
     }
     if(pass.length < 6 || pass.length > 15){
-        mess.innerHTML = 'Vui long nhập mật khẩu';
+        mess.innerHTML = 'Vui lòng nhập mật khẩu';
         return false;
     }else{
         mess.innerHTML = '';
+        return true;
     }
 }
+
 function validation_Login(){
     validateEmail();
     validatePass();
@@ -35,6 +40,9 @@ function validateName() {
     if(name == ""){
         mess.innerHTML = 'Tên không được để trống';
         return false;
+    }else{
+        mess.innerHTML = '';
+        return true;
     }
 }
 
@@ -48,8 +56,17 @@ function validateEmail_Register() {
             || (dotposition + 2) >= email.length) {
             messEmail.innerHTML = 'Vui lòng nhập email';
         return false;
+    }else{
+        messEmail.innerHTML = '';
+        return true;
     }
 }
+
+function isPhone(number) {
+    return /(84|0[3|5|7|8|9])+([0-9]{8})\b/.test(number);
+}
+
+
 function validatePhone() {
     var phone = document.getElementById('inputPhone').value;
     var mess = document.getElementById('errorPhone');
@@ -57,22 +74,30 @@ function validatePhone() {
         mess.innerHTML = 'Số điện thoại không được để trống';
         return false;
     }
+    if (!isPhone(phone)){
+        mess.innerHTML = 'Số điện thoại không hợp lệ';
+        return false;
+    }else{
+        mess.innerHTML = '';
+        return true;
+    }
 }
 
 function validatePass_Register() {
     var pass = document.getElementById('inputPass').value;
     var mess = document.getElementById('errorPass');
+    var checkpass = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
     if ( pass == ""){
         mess.innerHTML = 'Mật khẩu không được để trống';
         return false;
-    }
-    if ( pass.length < 6 || pass.length > 15){
-        mess.innerHTML = 'Mật khẩu phải từ 6 đến 15 kí tựn'
-        return false;
     }else{
         mess.innerHTML = "";
+        return true;
     }
 }
+
+
+
 function validate_Register() {
     validateName();
     validateEmail_Register();

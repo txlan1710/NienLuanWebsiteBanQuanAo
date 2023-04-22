@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="StyleWeb/product.css" />
     <title>Document</title>
     <script>
       function show(){
@@ -18,7 +18,7 @@
   <body>
     <header>
       <div class="header-main-left">
-        <img class="logo" src="Hinhanh/favicon.ico" alt="img-log" />
+        <img class="logo" src="Ao/favicon.ico" alt="img-log" />
       </div>
       <div class="header-main-right">
         <li class="search">

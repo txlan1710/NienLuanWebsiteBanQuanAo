@@ -54,6 +54,12 @@ h2 {
   margin: 0;
 }
 
+.section-header {
+  border-bottom: solid 1px #737373;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+
 .field-input-wrapper {
   display: flex;
   flex-direction: column;
@@ -69,6 +75,14 @@ h2 {
 .field-input-wrapper input {
   padding: 10px;
 }
+
+.error {
+  color: red;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px;
+}
+
 
 .section-header-pay h2 {
   margin-bottom: 10px;
@@ -156,6 +170,7 @@ h2 {
   border-bottom: solid 1px #737373;
   margin: 10px 0;
   padding: 5px 0;
+  font-weight: 600;
 }
 
 .total-title {

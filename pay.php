@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="pay.css" />
+    <link rel="stylesheet" href="StyleWeb/pay.css" />
     <title>Document</title>
   </head>
   <body>
@@ -19,42 +19,44 @@
               <div class="section-header">
                 <h2 class="section-title">Thông tin giao hàng</h2>
               </div>
-              <div class="divider"></div>
-              <div class="section-content">
+              <div class="section-content"> 
                 <div class="field-required">
                   <div class="field-input-wrapper">
-                    <label class="field-label" for="#">Email</label>
-                    <input
-                      placeholder="Email"
-                      class="field-input"
-                      type="text"
-                    />
-                  </div>
-                  <div class="field-input-wrapper">
-                    <label class="field-label" for="#">Họ và tên</label>
-                    <input
-                      placeholder="Họ và tên"
-                      class="field-input"
-                      type="text"
-                    />
-                  </div>
-                  <div class="field-input-wrapper">
-                    <label class="field-label" for="#">Số điện thoại</label>
-                    <input
-                      placeholder="Số điện thoại"
-                      class="field-input"
-                      type="text"
-                    />
-                  </div>
-                  <div class="field-input-wrapper">
-                    <label class="field-label" for="#">Địa chỉ</label>
-                    <input
-                      placeholder="Địa chỉ"
-                      class="field-input"
-                      type="text"
-                    />
-                  </div>
-                </div>
+                      <label class="field-label" for="#">Email</label>
+                      <input
+                        placeholder="Email"
+                        class="field-input"
+                        type="text"
+                        readonly
+                      />
+                    </div>
+                    <div class="field-input-wrapper">
+                      <label class="field-label" for="#">Họ và tên</label>
+                      <input
+                        placeholder="Họ và tên"
+                        class="field-input"
+                        type="text"
+                        readonly
+                      />
+                    </div>
+                    <div class="field-input-wrapper">
+                      <label class="field-label" for="#">Số điện thoại</label>
+                      <input
+                        placeholder="Số điện thoại"
+                        class="field-input"
+                        type="text" 
+                        readonly
+                      />
+                    </div>
+                    <div class="field-input-wrapper">
+                      <label class="field-label" for="#">Địa chỉ</label>
+                      <input
+                        placeholder="Địa chỉ"
+                        class="field-input"
+                        type="text"
+                        readonly
+                      />
+                    </div>
                 <div class="section-payment-method">
                   <div class="section-header-pay">
                     <h2>Phương thức thanh toán</h2>
@@ -75,8 +77,10 @@
             </div>
             <div class="step-footer">
               <a class="cart" href="cart.html">Giỏ hàng</a>
-              <button type="button">Thanh toán</button>
+              <button type="submit">Thanh toán</button>
             </div>
+          </form>
+        </div>
           </div>
         </div>
         <div class="sidebar">
@@ -116,5 +120,6 @@
         </div>
       </div>
     </div>
+    <script src="kiemtra.js"></script>
   </body>
 </html>
