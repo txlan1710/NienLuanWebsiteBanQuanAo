@@ -9,7 +9,7 @@
     $delproduct = "DELETE FROM PRODUCT WHERE P_ID='$dbid'";
     
     if(mysqli_query($conn, $delproduct)){
-        echo ' thanh công ';
+        
         header('location:http://localhost/nienluanwebsitebanquanao/product_list.php');
     }
 ?>

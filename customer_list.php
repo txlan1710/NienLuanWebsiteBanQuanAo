@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <h1>Quản lý sản phẩm</h1>
+        <h1>Quản lý khách hàng</h1>
     </header>
     <section class="admin-content">
         <div class="admin-left admin-content-left">
@@ -36,9 +36,9 @@
         <div class="admin-right admin-content-right">
             <div class="main-container">
                 <div class="main-container-search">
-                    <h2>Danh mục sản phẩm</h2>
+                    <h2>Danh mục khách hàng</h2>
                     <div class="" input-search-icon>
-                        <form method="post" action="product_list.php">
+                        <form method="post" action="customer_list.php">
                             <input type="text" name="input-search" class="input-search"
                                 placeholder="Bạn muốn tìm kiếm gì?" />
                             <button name="btn-search-input" type="summit">
@@ -52,12 +52,10 @@
                         <thead>
                             <tr>
                                 <th class="thead stt">STT</th>
-                                <th class="thead name">Tên sản phẩm</th>
-                                <th class="thead category-product">Danh mục sản phâm</th>
-                                <th class="thead price">Giá</th>
-                                <th class="thead price">Mô tả sản phẩm</th>
-                                <th class="thead mage">Ảnh</th>
-                                <th class="thead btn-add-del">Chức năng</th>
+                                <th class="thead name">Tên khách hàng</th>
+                                <th class="thead category-product">Email</th>
+                                <th class="thead price">Password</th>
+                                <th class="thead price">Số điện thoại</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -70,23 +68,22 @@
                             <span class="empty-key-search">Vui lòng nhập dữ liệu vào ô tìm kiếm trống<span>
                                     <?php   
                                 }
-                                $sql = "SELECT * FROM `PRODUCT` WHERE P_NAME LIKE '%$key%'";
+                                $sql = "SELECT * FROM `CUSTOMERS` WHERE C_NAME LIKE '%$key%' or C_EMAIL LIKE '%$key%' OR C_PHONE LIKE '%$key%'";
 
                             }else{
-                                $sql = "SELECT * FROM `PRODUCT`";
+                                $sql = "SELECT * FROM `CUSTOMERS`";
                             }
                             $query = mysqli_query($conn,$sql);
                             while($row=mysqli_fetch_array($query)){
                             ?>
                                     <tr class="input-tbody-tr">
-                                        <td><span><?php echo $row['P_ID']; ?></span></td>
-                                        <td><span><?php echo $row['P_NAME']; ?></span></td>
-                                        <td><span><?php echo $row['PT_ID']; ?></span></td>
-                                        <td><span><?php echo $row['P_PRICE']; ?></span></td>
-                                        <td><span><?php echo $row['P_DESCRIPTION']; ?></span></td>
-                                        <td><img src="upload/<?php echo $row['NAME_IMAGE']?>" width=120></td>
+                                        <td><span><?php echo $row['C_ID']; ?></span></td>
+                                        <td><span><?php echo $row['C_NAME']; ?></span></td>
+                                        <td><span><?php echo $row['C_EMAIL']; ?></span></td>
+                                        <td><span><?php echo $row['C_PASSWORD']; ?></span></td>
+                                        <td><span><?php echo $row['C_PHONE']; ?></span></td>
                                         <th class="tbody btn-add-del">
-                                            <a href="connect//edit_admin.php?id=<?php echo $row['P_ID']; ?>"
+                                            <!-- <a href="connect//edit_admin.php?id=<?php echo $row['C_ID']; ?>"
                                                 class="edit_admin"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                     height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -96,8 +93,8 @@
                                                     </path>
                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z">
                                                     </path>
-                                                </svg></a>
-                                            <a href="connect//delete_admin.php?id=<?php echo $row['P_ID']; ?>"
+                                                </svg></a> -->
+                                            <a href="connect//delete_customer.php?id=<?php echo $row['C_ID']; ?>"
                                                 class="delete_admin"
                                                 onclick="return confirm('bạn có muốn xóa không'); "><svg
                                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24"

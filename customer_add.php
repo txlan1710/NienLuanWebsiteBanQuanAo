@@ -20,7 +20,7 @@
     ?>
 
     <header>
-        <h1>Quản lý sản phẩm</h1>
+        <h1>Quản lý khách hàng</h1>
     </header>
     <section class="admin-content">
         <div class="admin-left admin-content-left">
@@ -43,14 +43,14 @@
         </div>
         <div class="admin-right admin-content-right">
             <div class="admin-content-right-product_add">
-                <h2>Thêm sản phẩm</h2>
+                <h2>Thêm khách hàng</h2>
                 <form action="connect/dmproduct_add.php" method="post" enctype="multipart/form-data">
-                    <label for="">Nhập sản phẩm <span style="color: red">*</span></label>
+                    <label for="">Nhập tên khách hàng <span style="color: red">*</span></label>
                     <input type="text" name="Name" required />
-                    <label for="">Loại sản phẩm <span style="color: red">*</span></label>
+                    <label for="">Nhập EMAIL KHÁCH HÀNG<span style="color: red">*</span></label>
                     <select name="Type" id="type-input" required>
                         <option value="">----Tên danh mục----</option>
-                        <?php foreach($category as $key => $value){ ?>  
+                        <?php foreach($category as $key => $value){ ?>
                         <option value="<?php echo $value['PT_ID']?>"> <?php echo $value['PT_NAME'] ?></option>
                         <?php } ?>
                     </select>

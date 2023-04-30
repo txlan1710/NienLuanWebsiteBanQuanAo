@@ -7,8 +7,8 @@
     
     $delproduct = "DELETE FROM `PRODUCT` WHERE P_ID=$dbpid;";
 
-    
+    echo 'P_ID';
     if(mysqli_query($conn, $delproduct)){
-        echo 'xin chào';
+        // header('location: ../nienluanwebsitebanquanao/product_list.php');
     }
 ?>

@@ -142,24 +142,5 @@ header{
 
 
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
 
-th {
-    height: 50%;
-}
 
-thead {
-    font-size: 17px;
-}
-
-table, td, th{
-    border: solid 1px black;
-}
-
-svg {
-    background-color: white;
-    border: none;
-}
